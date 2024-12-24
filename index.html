@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>Hệ Thống Showroom Của Quạt Trần Mỹ</title>
+    <meta property="og:title" content="Hệ thống Showroom Của Quạt Trần Mỹ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MT9BJ49');</script>
+    <!-- End Google Tag Manager -->
+
+    <script src="babel.min.js"></script>
+    <script src="react.production.min.js"></script>
+    <script src="react-dom.production.min.js"></script>
+
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+          :root {
+      --dl-color-gray-500: #595959;
+      --dl-color-gray-700: #999999;
+      --dl-color-gray-900: #D9D9D9;
+      --dl-size-size-large: 144px;
+      --dl-size-size-small: 48px;
+      --dl-color-danger-300: #A22020;
+      --dl-color-danger-500: #BF2626;
+      --dl-color-danger-700: #E14747;
+      --dl-color-gray-black: #000000;
+      --dl-color-gray-white: #FFFFFF;
+      --dl-size-size-medium: 96px;
+      --dl-size-size-xlarge: 192px;
+      --dl-size-size-xsmall: 16px;
+      --dl-space-space-unit: 16px;
+      --dl-color-primary-100: #003EB3;
+      --dl-color-primary-300: #0074F0;
+      --dl-color-primary-500: #14A9FF;
+      --dl-color-primary-700: #85DCFF;
+      --dl-color-success-300: #199033;
+      --dl-color-success-500: #32A94C;
+      --dl-color-success-700: #4CC366;
+      --dl-size-size-xxlarge: 288px;
+      --dl-size-size-maxwidth: 1400px;
+      --dl-radius-radius-round: 50%;
+      --dl-space-space-halfunit: 8px;
+      --dl-space-space-sixunits: 96px;
+      --dl-space-space-twounits: 32px;
+      --dl-radius-radius-radius2: 2px;
+      --dl-radius-radius-radius4: 4px;
+      --dl-radius-radius-radius8: 8px;
+      --dl-space-space-fiveunits: 80px;
+      --dl-space-space-fourunits: 64px;
+      --dl-space-space-threeunits: 48px;
+      --dl-space-space-oneandhalfunits: 24px;
+    }
+    .button {
+      color: var(--dl-color-gray-black);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-color: var(--dl-color-gray-black);
+      border-width: 1px;
+      border-radius: 4px;
+      background-color: var(--dl-color-gray-white);
+    }
+    .input {
+      color: var(--dl-color-gray-black);
+      cursor: auto;
+      padding: 0.5rem 1rem;
+      border-color: var(--dl-color-gray-black);
+      border-width: 1px;
+      border-radius: 4px;
+      background-color: var(--dl-color-gray-white);
+    }
+    .textarea {
+      color: var(--dl-color-gray-black);
+      cursor: auto;
+      padding: 0.5rem;
+      border-color: var(--dl-color-gray-black);
+      border-width: 1px;
+      border-radius: 4px;
+      background-color: var(--dl-color-gray-white);
+    }
+    .list {
+      width: 100%;
+      margin: 1em 0px 1em 0px;
+      display: block;
+      padding: 0px 0px 0px 1.5rem;
+      list-style-type: none;
+      list-style-position: outside;
+    }
+    .list-item {
+      display: list-item;
+    }
+    .teleport-show {
+      display: flex !important;
+      transform: none !important;
+    }
+    .Heading {
+      font-size: 32px;
+      font-family: Inter;
+      font-weight: 700;
+      line-height: 1.15;
+      text-transform: none;
+      text-decoration: none;
+    }
+    .Content {
+      font-size: 16px;
+      font-family: Inter;
+      font-weight: 400;
+      line-height: 1.15;
+      text-transform: none;
+      text-decoration: none;
+    }
+    </style>
+    <style data-tag="custom">
+    .home-container {
+      width: 100%;
+      display: flex;
+      overflow: auto;
+      min-height: 100vh;
+      align-items: center;
+      flex-direction: column;
+    }
+    .home-menu {
+      flex: 0 0 auto;
+      display: flex;
+      align-self: stretch;
+      align-items: flex-start;
+      padding-top: var(--dl-space-space-unit);
+      padding-left: var(--dl-space-space-sixunits);
+      padding-right: var(--dl-space-space-sixunits);
+      padding-bottom: var(--dl-space-space-unit);
+      justify-content: space-between;
+      background-color: #0e5046;
+    }
+    .home-image {
+      width: var(--dl-size-size-xlarge);
+      object-fit: cover;
+    }
+    .home-image1 {
+      width: var(--dl-size-size-xlarge);
+      object-fit: cover;
+    }
+    .home-cover {
+      flex: 0 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      padding-top: var(--dl-space-space-twounits);
+      padding-left: var(--dl-space-space-sixunits);
+      padding-right: var(--dl-space-space-sixunits);
+      padding-bottom: var(--dl-space-space-twounits);
+    }
+    .home-image2 {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .home-type-sr {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-left: var(--dl-space-space-sixunits);
+    margin-bottom: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-sixunits);
+    justify-content: center;
+    }
+    .home-text03 {
+      font-size: 1.1rem;
+      font-style: normal;
+      font-weight: 500;
+      margin-left: var(--dl-space-space-unit);
+      padding-top: var(--dl-space-space-halfunit);
+      border-color: #c7c7c7;
+      border-width: 1px;
+      padding-left: var(--dl-space-space-unit);
+      border-radius: var(--dl-radius-radius-radius8);
+      padding-right: var(--dl-space-space-unit);
+      padding-bottom: var(--dl-space-space-halfunit);
+    }
+    .home-type-sr .home-text03:hover {
+      background-color: #fee877;
+      color:#0c5046;
+      cursor: pointer;
+    }
+
+    .home-luachon {
+    padding: 0 200px;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+    .home-heading {
+      color:  #0c5046;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 500;
+      padding-top: var(--dl-space-space-halfunit);
+      margin-right: var(--dl-space-space-unit);
+      padding-left: var(--dl-space-space-unit);
+      border-radius: var(--dl-radius-radius-radius8);
+      padding-right: var(--dl-space-space-unit);
+      padding-bottom: var(--dl-space-space-halfunit);
+      border: 1px solid #0c5046;
+      margin-bottom: 15px;
+    }
+    .home-heading:hover {
+      background: #0c5046;
+      color: #fee877;
+    }
+    .home-danhsach {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin-top: var(--dl-space-space-twounits);
+      align-items: flex-start;
+      padding-left: var(--dl-space-space-sixunits);
+      margin-bottom: var(--dl-space-space-twounits);
+      padding-right: var(--dl-space-space-sixunits);
+    }
+    .home-listshowroom {
+      flex: 0 0 auto;
+      width: 35%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .home-container1 {
+      display: flex;
+      align-items: flex-start;
+      padding-top: var(--dl-space-space-unit);
+      padding-left: var(--dl-space-space-twounits);
+      border-radius: var(--dl-radius-radius-radius8);
+      margin-bottom: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-twounits);
+      flex-direction: column;
+      padding-bottom: var(--dl-space-space-unit);
+      background-color: #f2f2f2;
+    }
+    .home-text {
+      margin-bottom: var(--dl-space-space-halfunit);
+    }
+    .home-container2 {
+      display: flex;
+      align-items: flex-start;
+      padding-top: var(--dl-space-space-unit);
+      padding-left: var(--dl-space-space-twounits);
+      border-radius: var(--dl-radius-radius-radius8);
+      margin-bottom: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-twounits);
+      flex-direction: column;
+      padding-bottom: var(--dl-space-space-unit);
+      background-color: #f2f2f2;
+    }
+    .home-text05 {
+      margin-bottom: var(--dl-space-space-halfunit);
+    }
+    .home-container3 {
+      display: flex;
+      align-items: flex-start;
+      padding-top: var(--dl-space-space-unit);
+      padding-left: var(--dl-space-space-twounits);
+      border-radius: var(--dl-radius-radius-radius8);
+      margin-bottom: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-twounits);
+      flex-direction: column;
+      padding-bottom: var(--dl-space-space-unit);
+      background-color: #f2f2f2;
+    }
+    .home-text10 {
+      margin-bottom: var(--dl-space-space-halfunit);
+    }
+    .home-map {
+      flex: 0 0 auto;
+      width: 65%;
+      display: flex;
+      align-items: flex-start;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .home-container4 {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin-top: var(--dl-space-space-twounits);
+      text-align: center;
+      align-items: flex-start;
+      padding-top: var(--dl-space-space-unit);
+      padding-left: var(--dl-space-space-sixunits);
+      padding-right: var(--dl-space-space-sixunits);
+      padding-bottom: var(--dl-space-space-unit);
+      justify-content: center;
+    }
+    .home-text15 {
+      font-size: 12px;
+    }
+    .activate {
+      background-color: #0c5046;
+      color: #fee877;
+    }
+    .activate2 {
+      background-color: #fee877;
+      color: #0c5046;
+    }
+    .home-dailytinh {
+      height: auto;
+      padding-left: var(--dl-space-space-unit);
+      margin-bottom: var(--dl-space-space-unit);
+      padding-right: var(--dl-space-space-unit);
+    }
+    .home-boxtext {
+      width: 600px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .home-heading1 {
+      font-size: 1.2rem;
+      margin-bottom: var(--dl-space-space-halfunit);
+    }
+
+    @media(max-width: 767px) {
+      div#typesroom {
+        display: contents;
+      }
+      .home-image2 {
+        height: auto;
+      }
+      .home-menu {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+      }
+      .home-cover {
+        padding-top: var(--dl-space-space-unit);
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+        padding-bottom: var(--dl-space-space-unit);
+      }
+      .home-type-sr {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+      }
+      .home-luachon {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+      }
+      .home-danhsach {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+      }
+      .home-container4 {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+      }
+      .home-map {
+        margin-left: 20px;
+      }
+    }
+    @media(max-width: 479px) {
+      .home-boxtext {
+        width: inherit;
+      }
+      .home-image2 {
+        height: 150px;
+      }
+      .home-image1 {
+        display: none;
+      }
+      .home-menu {
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+      }
+      .home-menu a:nth-child(1) {
+        margin: auto;
+      }
+      .home-cover {
+        padding-top: var(--dl-space-space-unit);
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+      }
+      .home-type-sr {
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        display: inline;
+      }
+      .home-luachon {
+        padding: 0;
+        justify-content: space-around;
+      }
+      .home-heading {
+        font-size: 1rem;
+      }
+      .home-heading1 {
+        font-size: 1.1rem;
+      }
+      .home-text03 {
+        font-size: 1rem;
+        margin: 5px 20px 5px 20px;
+      }
+      .home-danhsach {
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        flex-direction: column;
+      }
+      .home-listshowroom {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      .home-map {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        margin-left: 0px;
+      }
+      .home-container4 {
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+      }
+      .home-dailytinh {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: flex-start;
+        padding-left: var(--dl-space-space-halfunit);
+        padding-right: var(--dl-space-space-halfunit);
+        justify-content: center;
+      }
+    }
+    </style>
+    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT9BJ49"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div>
+      <div class="home-container">
+        <div class="home-menu">
+          <a href="https://quattranmy.com/"><img
+            alt="image"
+            src="public/playground_assets/logo-200h.png"
+            class="home-image"
+          /></a>
+          <a href="tel:084 355 3455"><img
+            alt="image"
+            src="public/playground_assets/hotline-200h.png"
+            class="home-image1"
+          /></a>
+        </div>
+        <div class="home-cover">
+          <img
+            src="public/playground_assets/1.jpg"
+            alt="image"
+            class="home-image2"
+          />
+        </div>
+        <div id="typesroom"></div>
+        
+        <div id="dailytinh"></div>
+        <div id="luachon" style="width: 100%;"></div>
+        <div class="home-danhsach">
+          <div class="home-listshowroom" id="listsr"></div>
+          <div class="home-map" id="codemap">
+          </div>
+        </div>
+        <div id="bcuyquyen"></div>
+        <div class="home-container4">
+          <span class="home-text15">
+            <span>
+              © 2019. Công ty cổ phần Quạt Trần Mỹ. Văn phòng: 122 Trần Duy Hưng,
+              Cầu Giấy, Hà Nội. Điện thoại: 0942689368. Email:
+              info@quattranmy.com.
+            </span>
+            <br />
+            <span>
+              GPĐKKD số 0106335366 sở KHĐT Tp. Hà Nội cấp ngày 25/10/2013.
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/babel">
+  let listsromm, showrss, codemp, typesrx, dailyx;
+
+  class BecomeUyQuyen extends React.Component {
+    constructor() {
+      super();
+    }
+    render(){
+      return(
+        <div class="home-dailytinh">
+        <div class="home-boxtext">
+          <span>
+            Để trở thành Đại lý Uỷ Quyền của LuxuryFan, hãy liên hệ hotline: 084 355 3455
+          </span>
+        </div>
+      </div>
+      );
+    }
+  } 
+
+  class DailyTinh extends React.Component {
+    constructor() {
+      super();
+      dailyx = this;
+    }
+    render(){
+      if (typesrx.state.type == "Tinh"){
+      return(
+      <div class="home-dailytinh">
+        <div class="home-boxtext">
+          <h2 class="home-heading1">
+            Quạt trần Mỹ đã có mặt tại hầu hết các tỉnh thành tại Việt Nam
+          </h2>
+          <span>
+            <span>
+              Để tìm được đại lý gần nhất quý khách vui lòng liên hệ đến số
+              điện thoại:
+            </span>
+            <br />
+            <span>084 355 3455</span>
+            <br />
+          </span>
+        </div>
+      </div>
+      );
+      }
+      else {
+        return (<div></div>);
+      }
+
+    }
+  }
+
+
+  class TypeShowroom extends React.Component {
+    constructor() {
+      super();
+      typesrx = this;
+      this.state = {
+        type: "UyQuyen"
+      }
+    }
+
+    whattype = (e) => {
+      let target = e.currentTarget;
+      this.setState({'type': target.id});
+      listsromm.forceUpdate();
+      if (target.id == "UyQuyen") {
+        listsromm.setState({'showroom': 'hn', 'activeButton':'showrHN'});
+        showrss.setState({'showcode':'s75a'})
+        codemp.forceUpdate();
+        showrss.forceUpdate();
+        dailyx.forceUpdate();
+      }
+      if (target.id == "DienMay") {
+        listsromm.setState({'showroom': 'media'});
+        showrss.setState({'showcode':'mm_hqv'})
+        codemp.forceUpdate();
+        showrss.forceUpdate();
+        dailyx.forceUpdate();
+      }
+      if (target.id == "Tinh") {
+        listsromm.setState({'showroom': 'thainguyen', 'activeButton':'showrTN' });
+        showrss.setState({'showcode':'hoangthai'})
+        codemp.forceUpdate();
+        showrss.forceUpdate();
+        dailyx.forceUpdate();
+      }
+
+
+    }
+
+    render(){
+      return(
+        <div class="home-type-sr">
+          <h2 class={this.state.type == "UyQuyen"? "home-text03 activate2": "home-text03"} id="UyQuyen" onClick={this.whattype}>Đại lý uỷ quyền</h2>
+          <h2 class={this.state.type == "DienMay"? "home-text03 activate2": "home-text03"} id="DienMay" onClick={this.whattype}>Hệ thống điện máy</h2>
+          <h2 class={this.state.type == "Tinh"? "home-text03 activate2": "home-text03"} id="Tinh" onClick={this.whattype}>Đại lý tại tỉnh</h2>
+        </div>
+      );
+    }
+    
+  }
+
+  class ListShowroom extends React.Component {
+    constructor(){
+        super();
+        listsromm = this;
+        this.state = {
+          showroom: 'hn',
+          activeButton: 'showrHN'
+        }
+    }
+
+    choose = (e) => {
+      e.preventDefault();
+      let target = e.currentTarget;
+      this.setState({'showroom': target.dataset.name, 'activeButton':target.id});
+      showrss.setState({'showcode': target.dataset.focus});
+      showrss.forceUpdate();
+      codemp.forceUpdate();
+      
+    }
+
+    render(){
+      if (typesrx.state.type == "UyQuyen"){
+        return(
+        <div class="home-luachon">
+          <a href="#" id="showrHN" data-name="hn" data-focus="s75a" onClick={this.choose}><h2 class={this.state.activeButton == 'showrHN' ? 'home-heading activate' : 'home-heading'}>Hà Nội</h2></a>
+          <a href="#" id="showrHCM" data-name="hcm" data-focus="s14d" onClick={this.choose}><h2 class={this.state.activeButton == 'showrHCM' ? 'home-heading activate' : 'home-heading'}>Hồ Chí Minh</h2></a>
+        </div>);
+      }
+      if (typesrx.state.type == "Tinh"){
+        return(
+        <div class="home-luachon">
+          <a href="#" id="showrTN" data-name="thainguyen" data-focus="hoangthai" onClick={this.choose}><h2 class={this.state.activeButton == 'showrTN' ? 'home-heading activate' : 'home-heading'}>Thái Nguyên</h2></a>
+          <a href="#" id="showrBG" data-name="bacgiang" data-focus="denxinh" onClick={this.choose}><h2 class={this.state.activeButton == 'showrBG' ? 'home-heading activate' : 'home-heading'}>Bắc Giang</h2></a>
+          <a href="#" id="showrPT" data-name="phutho" data-focus="huyhoang" onClick={this.choose}><h2 class={this.state.activeButton == 'showrPT' ? 'home-heading activate' : 'home-heading'}>Phú Thọ</h2></a>
+          <a href="#" id="showrBN" data-name="bacninh" data-focus="tanthinh" onClick={this.choose}><h2 class={this.state.activeButton == 'showrBN' ? 'home-heading activate' : 'home-heading'}>Bắc Ninh</h2></a>
+          <a href="#" id="showrHD" data-name="haiduong" data-focus="giathinh" onClick={this.choose}><h2 class={this.state.activeButton == 'showrHD' ? 'home-heading activate' : 'home-heading'}>Hải Dương</h2></a>
+          <a href="#" id="showrHY" data-name="hungyen" data-focus="phucuong" onClick={this.choose}><h2 class={this.state.activeButton == 'showrHY' ? 'home-heading activate' : 'home-heading'}>Hưng Yên</h2></a>
+          <a href="#" id="showrHP" data-name="haiphong" data-focus="nguphuc" onClick={this.choose}><h2 class={this.state.activeButton == 'showrHP' ? 'home-heading activate' : 'home-heading'}>Hải Phòng</h2></a>
+          <a href="#" id="showrND" data-name="namdinh" data-focus="nghiemtuoi" onClick={this.choose}><h2 class={this.state.activeButton == 'showrND' ? 'home-heading activate' : 'home-heading'}>Nam Định</h2></a>
+          <a href="#" id="showrTB" data-name="thaibinh" data-focus="hungmai" onClick={this.choose}><h2 class={this.state.activeButton == 'showrTB' ? 'home-heading activate' : 'home-heading'}>Thái Bình</h2></a>
+          <a href="#" id="showrNB" data-name="ninhbinh" data-focus="thanhliem" onClick={this.choose}><h2 class={this.state.activeButton == 'showrNB' ? 'home-heading activate' : 'home-heading'}>Ninh Bình</h2></a>
+          <a href="#" id="showrTH" data-name="thanhhoa" data-focus="hanhphuong" onClick={this.choose}><h2 class={this.state.activeButton == 'showrTH' ? 'home-heading activate' : 'home-heading'}>Thanh Hoá</h2></a>
+          <a href="#" id="showrNA" data-name="nghean" data-focus="hungthao" onClick={this.choose}><h2 class={this.state.activeButton == 'showrNA' ? 'home-heading activate' : 'home-heading'}>Nghệ An</h2></a>
+          </div>);
+      }
+      if (typesrx.state.type != "UyQuyen"){
+        return(<div></div>);
+      }
+
+    }
+  }
+
+  class Codemap extends React.Component {
+    constructor(){
+      super();
+      codemp = this;
+      this.state = {
+        s122tdh : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5491972245986!2d105.79676987479571!3d21.01070028839956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adbbaf61aef7%3A0x8bad799847714654!2zUXXhuqF0IHRy4bqnbiBN4bu5IEx1eHVyeUZhbiAtIDEyMiBUcuG6p24gRHV5IEjGsG5n!5e0!3m2!1svi!2s!4v1700015671570!5m2!1svi!2s",
+        s75a : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7751618587836!2d105.81621351070861!3d21.00164798862864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac85201ed161%3A0x8f70535016e1da63!2zNzVhIMSQLiBOZ3V54buFbiBUcsOjaSwgTmfDoyBUxrAgU-G7nywgVGhhbmggWHXDom4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1681612906065!5m2!1svi!2s",
+        s347 : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1722909266196!2d105.85953481070818!3d20.985729689174626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad157a338e87%3A0xc57a37d15684eb91!2zMzQ3IMSQLiBIb8OgbmcgTWFpLCBIb8OgbmcgVsSDbiBUaOG7pSwgSG_DoG5nIE1haSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1681615056533!5m2!1svi!2s",
+        s4at : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5425914511816!2d106.69389901053373!3d10.769691959273821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3e51eb1edb%3A0x699361a7b8b00506!2zNEEgxJAuIFRy4bqnbiBIxrBuZyDEkOG6oW8sIFBoxrDhu51uZyBQaOG6oW0gTmfFqSBMw6NvLCBRdeG6rW4gMSwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcwMDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1681615122843!5m2!1svi!2s",
+        s14d : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15676.910552736015!2d106.7013648!3d10.7938696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175297321c7bf4b%3A0xaac94aa8a4f0c18a!2zTHV4dXJ5RmFuIC0gxJBp4buHbiBCacOqbiBQaOG7pw!5e0!3m2!1sen!2s!4v1685593516592!5m2!1sen!2s",
+        mm_hqv : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7447.3416455631195!2d105.80261791268921!3d21.04585326459289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8c9f51eeef%3A0x7c09768e45ee74cb!2sMedia%20Mart!5e0!3m2!1svi!2sus!4v1684221790028!5m2!1svi!2sus",
+        mm_md : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29792.266709156538!2d105.779255!3d21.031352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b3792516bd%3A0xc3a444b29759b22b!2zTWVkaWEgTWFydCBN4bu5IMSQw6xuaA!5e0!3m2!1svi!2sus!4v1684221970955!5m2!1svi!2sus",
+        mm_tx : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1862.6548272524344!2d105.78826!3d20.980221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acce73f2a2e7%3A0xbcd84e7c58047a93!2sMedia%20Mart%20Thanh%20Xu%C3%A2n!5e0!3m2!1svi!2sus!4v1684222052582!5m2!1svi!2sus",
+        mm_hbt : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.422187398385!2d105.85218600000002!3d21.024238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9353b92773%3A0xe1f7ac96dd51ddfc!2sMedia%20Mart%20Hai%20B%C3%A0%20Tr%C6%B0ng!5e0!3m2!1svi!2sus!4v1684222106370!5m2!1svi!2sus",
+        mm_lb : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7446.939270564725!2d105.889858!3d21.053897!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a99cf1e42d03%3A0xfe5c6363fad30ac4!2sMedia%20Mart%20Long%20Bi%C3%AAn!5e0!3m2!1svi!2sus!4v1684222256291!5m2!1svi!2sus",
+        hoangthai: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.8115554710603!2d105.8332878747296!3d21.593277668151334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313526e6ba66924d%3A0xdf82833d00ba8b36!2zQ8O0bmcgdHkgQ-G7lSBwaOG6p24gSG_DoG5nIFRow6Fp!5e0!3m2!1sen!2s!4v1735015365540!5m2!1sen!2s",
+        denxinh: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.873762171674!2d106.208597!3d21.276464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31356d6f7cc8a373%3A0xb645fe6b8ed692fe!2zxJDDqG4gWGluaCA2ODYgTMOqIEzhu6Np!5e0!3m2!1sen!2s!4v1735024774940!5m2!1sen!2s",
+        huyhoang: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.4927223267987!2d105.3763915!3d21.331051799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313493763babebff%3A0xb4e4a27beb6dce66!2zTlBQIFRoaeG6v3QgQuG7iyDEkGnhu4duIEh1eSBIb8Ogbmc!5e0!3m2!1sen!2s!4v1735026443842!5m2!1sen!2s",
+        tanthinh: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7440.352294113717!2d106.0805272005468!3d21.185160400547126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350c12172b0b69%3A0xb4270c0fe7feaad8!2zQ8O0bmcgVHkgVG5oaCBUaGnhur90IELhu4sgxJBp4buHbiBOxrDhu5tjIFTDom4gVGjhu4tuaA!5e0!3m2!1sen!2s!4v1735028501013!5m2!1sen!2s",
+        giathinh: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.0872054150873!2d106.3897763!3d21.1090892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313579059e031795%3A0x6c21af162285349a!2zVGhp4bq_dCBC4buLIMSQaeG7h24gR2lhIFRo4buLbmg!5e0!3m2!1sen!2s!4v1735024937566!5m2!1sen!2s",
+        phucuong: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.265198918664!2d106.05777239999999!3d20.658787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135c6d6a1447de5%3A0x75a986a5234c01fe!2zNzQ4IE5ndXnhu4VuIFbEg24gTGluaCwgUC4gSGnhu4FuIE5hbSwgSMawbmcgWcOqbg!5e0!3m2!1sen!2s!4v1735028132378!5m2!1sen!2s",
+        nguphuc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.400837853122!2d106.69794827470987!3d20.85588789369472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7ac00459b869%3A0x6cc65a16a8bfe68a!2zU2nDqnUgdGjhu4sgxJFp4buHbiBOZ8WpIFBow7pj!5e0!3m2!1sen!2s!4v1735027127417!5m2!1sen!2s",
+        phuquy: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.542908539437!2d106.62155047470854!3d20.809772195265076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7733ef2c4631%3A0x448878b3b9fa5965!2zMjE2IFBoYW4gxJDEg25nIEzGsHUsIFRy4bqnbiBUaMOgbmggTmfhu40sIEtp4bq_biBBbiwgSOG6o2kgUGjDsm5nLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1735027539338!5m2!1sen!2s",
+        nghiemtuoi: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.4463596650776!2d106.29793907469289!3d20.19876461576892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31360fb60bf84b0b%3A0x7d61a777bd3bbdf6!2zTkdIScOKTSBUxq_GoEk!5e0!3m2!1sen!2s!4v1735026216827!5m2!1sen!2s",
+        landang: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.856155775565!2d106.16734317469871!3d20.429999808075465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e74e2b692d65%3A0x8bf3e7635341d79e!2zQ-G7rWEgSMOgbmcgTGFuIMSQ4bqxbmc!5e0!3m2!1sen!2s!4v1735027240594!5m2!1sen!2s",
+        hungmai: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.308557636245!2d106.33716887469936!3d20.45251620732197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e529edf77409%3A0x35945b0bf7418ab6!2zVHJ1bmcgVMOibSBUaMawxqFuZyBN4bqhaSBIw7luZyBNYWk!5e0!3m2!1sen!2s!4v1735027704857!5m2!1sen!2s",
+        thanhliem: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.36989103465!2d105.99684457469394!3d20.243488714287174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313671a35d673d35%3A0x9aa9f1351e68f819!2sThanh%20Li%C3%AAm%20Plaza!5e0!3m2!1sen!2s!4v1735025112511!5m2!1sen!2s",
+        hanhphuong: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.85382747364!2d105.7724114!3d19.803794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f8049ac52ab3%3A0x9e67fa319b0100de!2zQ-G7rWEgSMOgbmcgVGhp4bq_dCBC4buLIMSQaeG7h24gSOG6oW5oIFBoxrDGoW5n!5e0!3m2!1sen!2s!4v1735026583490!5m2!1sen!2s",
+        luongthuy: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17855.97641358264!2d105.77166748602497!3d19.807913040664545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f9077330f935%3A0xb72f84627e7d254!2zVGhp4bq_dCBC4buLIMSQaeG7h24gTMawxqFuZyBUaOG7p3k!5e0!3m2!1sen!2s!4v1735026747159!5m2!1sen!2s",
+        hungthao: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60480.13069970224!2d105.6813246206911!3d18.663629420308563!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce7dd84fc8bb%3A0x6c6f5e0720460ded!2zVGhp4bq_dCBC4buLIMSQaeG7h24gTsaw4bubYyBOZ2jhu4cgQW4gLSBUw7TMiW5nIMSQYcyjaSBMecyBIFRoacOqzIF0IEJpzKMgxJBpw6rMo24gSHXMgG5nIFRoYcyJbyBDUzE!5e0!3m2!1sen!2s!4v1735025705829!5m2!1sen!2s",
+      }
+    }
+
+    render(){
+      
+      return(
+        <iframe src={this.state[showrss.state.showcode]} width="100%" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      );
+      
+
+    }
+
+  }
+
+  class ItemSr extends React.Component {
+    constructor(props){
+      super(props);
+    }
+
+    getmap = (e) => {
+        e.preventDefault();
+        showrss.setState({'showcode': this.props.map});
+        codemp.forceUpdate();
+    }
+
+    render(){
+      return(
+        <a href="#" onClick={this.getmap}>
+        <div class="home-container1">
+          
+          <h3 class="home-text">{this.props.tenshowrom}</h3>
+          <span>
+            <span>{this.props.diachi}</span>
+            <br />
+            <span>Mở cửa: {this.props.time}</span>
+          </span>
+        </div>
+      </a>
+      );
+    }
+  }
+
+  class Showrooms extends React.Component {
+    constructor(){
+      super();
+      showrss = this;
+      this.state = {
+        hn : [{"map":"s75a", "tenshowrom":"QUẬN THANH XUÂN", "diachi":"75A Nguyễn Trãi, P. Khương Trung", "time":"8h30 - 18h00"},
+        {"map":"s122tdh", "tenshowrom":"QUẬN CẦU GIẤY", "diachi":"122 Trần Duy Hưng, P. Trung Hòa", "time":"8h30 - 21h00"},
+        {"map":"s347", "tenshowrom":"QUẬN HOÀNG MAI", "diachi":"347 Hoàng Mai, P.Hoàng Văn Thụ", "time":"8h30 - 18h00"},
+        ],
+        hcm : [
+        {"tenshowrom":"QUẬN BÌNH THẠNH", "map":"s14d", "diachi":"16 Điện Biên Phủ, Phường 17", "time":"8h30 - 18h00"},
+        ],
+        media: [{"tenshowrom":"Mediamart Hoàng Quốc Việt", "map":"mm_hqv", "diachi":"14 Hoàng Quốc Việt, Nghĩa Đô", "time":"8h00 - 21h30"},{"tenshowrom":"Mediamart Mỹ Đình", "map":"mm_md", "diachi":"18 Phạm Hùng, Cầu Giấy","time":"8h00 - 21h30"}, 
+        {"tenshowrom":"Mediamart Thanh Xuân", "map":"mm_tx", "diachi":"131 Trần Phú, Hà Đông","time":"8h00 - 21h30"}, {"tenshowrom":"Mediamart Hai Bà Trưng", "map":"mm_hbt", "diachi":"29F Hai Bà Trưng, Hoàn Kiếm", "time":"8h00 - 21h30"},
+        {"tenshowrom":"Mediamart Long Biên", "map":"mm_lb", "diachi":"3 Nguyễn Văn Linh, Long Biên", "time":"8h00 - 21h30"}],
+        thainguyen : [{"tenshowrom":"Hoàng Thái Electic", "map":"hoangthai", "diachi":"37 Hoàng Văn Thụ, Thành phố Thái Nguyên", "time":"8h00 - 21h30"}],
+        bacgiang : [{"tenshowrom":"Đèn Xinh", "map":"denxinh", "diachi":"686 Lê Lợi, P. Hoàng Văn Thụ, TP. Bắc Giang", "time":"8h00 - 21h30"}],
+        phutho: [{"tenshowrom":"Huy Hoàng", "map":"huyhoang", "diachi":"2575 - 2577 ĐL Hùng Vương, Nông Trang, Việt Trì", "time":"8h00 - 21h30"}],
+        bacninh: [{"tenshowrom":"Tân Thịnh", "map":"tanthinh", "diachi":" 30 Kinh Dương Vương, TP. Bắc Ninh", "time":"8h00 - 21h30"}],
+        haiduong: [{"tenshowrom":"Gia Thịnh", "map":"giathinh", "diachi":"Số 37 & 46 phố Bà Triệu, P.Sao Đỏ, TP.Chí Linh", "time":"8h00 - 21h30"}],
+        hungyen: [{"tenshowrom":"Phú Cường", "map":"phucuong", "diachi":"748 Nguyễn Văn Linh, P. Hiến Nam, TP. Hưng Yên", "time":"8h00 - 21h30"}],
+        haiphong: [{"tenshowrom":"Ngũ Phúc", "map":"nguphuc", "diachi":"Số 7 Lô 3B đường, Đ. Lê Hồng Phong, Ngô Quyền", "time":"8h00 - 21h30"},
+        {"tenshowrom":"Phú Quý", "map":"phuquy", "diachi":"216-218 Phan Đăng Lưu, Kiến An, Hải Phòng", "time":"8h00 - 21h30"}],
+        namdinh: [{"tenshowrom":"Nghiêm Tươi", "map":"nghiemtuoi", "diachi":"Số nhà 76 - 80, Khu 1 Yên Định, Hải Hậu", "time":"8h00 - 21h30"},
+        {"tenshowrom":"Lan Đằng", "map":"landang", "diachi":"75 Trường Chinh, Bà Triệu, TP. Nam Định", "time":"8h00 - 21h30"}],
+        thaibinh: [{"tenshowrom":"Hùng Mai", "map":"hungmai", "diachi":"150 Lê Quý Đôn, P. Bồ Xyên, Thái Bình", "time":"8h00 - 21h30"}],
+        ninhbinh: [{"tenshowrom":"Thanh Liêm", "map":"thanhliem", "diachi":"Số 779 Nguyễn Công Trứ, TP. Ninh Bình", "time":"8h00 - 21h30"}],
+        thanhhoa: [{"tenshowrom":"Hạnh Phương", "map":"hanhphuong", "diachi":"190 Nguyễn Trãi, P. Điện Biên, Thanh Hóa", "time":"8h00 - 21h30"},
+        {"tenshowrom":"Lương Thuỷ", "map":"luongthuy", "diachi":"118 -122 Nguyễn Trãi, TP. Thanh Hoá", "time":"8h00 - 21h30"}],
+        nghean: [{"tenshowrom":"Hùng Thảo", "map":"hungthao", "diachi":"Số 6 Dương Vân Nga, TP. Vinh", "time":"8h00 - 21h30"}],
+        showcode : "s75a",
+      }
+    }
+
+    render(){
+      let showrooms = this.state[listsromm.state.showroom];
+      return(
+        <div >
+        {showrooms.map(function(showroom, index){
+        return <ItemSr key={index} map={showroom.map} tenshowrom={showroom.tenshowrom} diachi={showroom.diachi} time={showroom.time}  />
+        })}
+        </div>
+      );
+    }
+  }
+
+  ReactDOM.render(<TypeShowroom/>, document.getElementById('typesroom'));
+  ReactDOM.render(<ListShowroom />, document.getElementById('luachon'));
+  ReactDOM.render(<Showrooms />, document.getElementById('listsr'));
+  ReactDOM.render(<Codemap />, document.getElementById('codemap'));
+  // ReactDOM.render(<DailyTinh />, document.getElementById('dailytinh'));
+  ReactDOM.render(<BecomeUyQuyen />, document.getElementById('bcuyquyen'));
+
+  </script>
+
+
+</html>
